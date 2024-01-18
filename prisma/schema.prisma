@@ -12,20 +12,39 @@ datasource db {
   relationMode = "prisma"
 }
 
-model SkinCareFeedback {
+model Feedback {
   id String @id @default(uuid())
   name String @db.Text
   phone String @db.Text 
   email String @db.Text
-  question1 String @db.Text
-  question2 String @db.Text
-  question3 String @db.Text
-  question4 String @db.Text
-  question5 String @db.Text
+  coachName String @db.Text
   suggestions String @db.Text
-  newClient Boolean
+  firstTime Boolean
+  workoutRating Int
+  cleanlinessRating Int
+  recommendationRating Int
   returnRating Int
+  coachRating Int
   location String @db.Text
+
   createdAt DateTime @default(now())
   @@index([location])
 }
+
+// model SkinCareFeedback {
+//   id String @id @default(uuid())
+//   name String @db.Text
+//   phone String @db.Text 
+//   email String @db.Text
+//   question1 String @db.Text
+//   question2 String @db.Text
+//   question3 String @db.Text
+//   question4 String @db.Text
+//   question5 String @db.Text
+//   suggestions String @db.Text
+//   newClient Boolean
+//   returnRating Int
+//   location String @db.Text
+//   createdAt DateTime @default(now())
+//   @@index([location])
+// }
