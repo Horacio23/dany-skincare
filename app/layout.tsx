@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "bg-lf-50")}>
+      <body className={cn(inter.className, "bg-gray-950")}>
         <ConfettiProvider />
         <ToastProvider />
         {children}
