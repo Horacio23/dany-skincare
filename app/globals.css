@@ -3,10 +3,19 @@
 @tailwind utilities;
 
 .gradient1{
-  background: rgb(253,200,199);
-  background: linear-gradient(0deg, rgba(253,200,199,1) 0%, rgba(254,230,229,1) 100%);
+  background: rgb(251,219,171);
+background: linear-gradient(0deg, rgba(251,219,171,1) 0%, rgba(183,147,93,1) 100%);
 }
 
+.gradient2{
+  background: rgb(47,48,49);
+  background: linear-gradient(0deg, rgba(47,48,49,1) 0%, rgba(3,7,18,1) 100%);
+}
+
+.gradient3{
+  background: rgb(251,219,171);
+background: linear-gradient(90deg, rgba(251,219,171,1) 0%, rgba(183,147,93,1) 100%);
+}
 @layer utilities {
   /* FONTS */
   .regular-64 {

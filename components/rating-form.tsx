@@ -96,22 +96,22 @@ const RatingForm = () => {
 
     return ( 
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="z-50">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="z-50 pb-8">
                 <FormField 
                     control={form.control}
                     name="firstTime"
                     render={({ field }) => (
                         <FormItem>
                             <div className="flex flex-col w-full px-8 items-center pb-4">
-                                <h1 className="bold-16 uppercase text-lf-90 text-center pb-2">{getQuestionText(0)}</h1>
-                                <div className="flex bg-white justify-between px-12 py-1 min-w-[320px] rounded-sm">
+                                <h1 className="bold-16 uppercase text-golden-100/90 text-center pb-2">{getQuestionText(0)}</h1>
+                                <div className="flex justify-between px-12 py-1 min-w-[320px] border-golden-300 border-t-[1px] pt-2">
                                     <Button 
                                         variant="lf"
                                         type="button"
                                         onClick={()=>setFirstTime(true)}
                                         className={cn(
-                                            "px-8 bold-16 text-slate-600",
-                                            firstTime  && "bg-tearose-100/70 text-sc-10"
+                                            "px-8 bold-16 text-golden-900",
+                                            firstTime  && "bg-golden-400 text-sc-10"
                                         )}
                                     >
                                         {language == "ES" ? "Si" : "Yes"}
@@ -121,8 +121,8 @@ const RatingForm = () => {
                                         type="button"
                                         onClick={()=>setFirstTime(false)}
                                         className={cn(
-                                            "px-8 bold-16 text-slate-600",
-                                            !firstTime && "bg-tearose-100/70 text-sc-10"
+                                            "px-8 bold-16 text-golden-900",
+                                            !firstTime && "bg-golden-400 text-slate-900"
                                         )}
                                     >No</Button>
                                 </div>
@@ -189,11 +189,11 @@ const RatingForm = () => {
                         <FormItem>
                             <FormControl>
                                 <div className="flex flex-col w-full px-8 items-center py-2">
-                                    <h1 className="bold-16 uppercase text-lf-90 text-center pb-2">{getQuestionText(5)}</h1>
-                                    <div className="flex bg-white justify-between py-1 min-w-[320px] rounded-sm">
+                                    <h1 className="bold-16 uppercase text-center text-golden-100/90 pb-2">{getQuestionText(5)}</h1>
+                                    <div className="flex justify-between py-1 min-w-[320px] ">
                                         <Textarea 
                                             placeholder="" 
-                                            className="resize-none"
+                                            className="resize-none border-black-80 rounded-md"
                                             {...field} 
                                         />
                                     </div>
@@ -202,16 +202,16 @@ const RatingForm = () => {
                         </FormItem>
                     )}
                 />
-                <div className=" mx-8 my-4 rounded-3xl gradient1 px-6 border-buff-500 border-[1px]">
+                <div className=" mx-8 my-4 rounded-3xl gradient1 px-6 border-black-80 border-[1px]">
                     <FormField 
                         control={form.control}
                         name="name"
                         render={({ field }) => (
                             <div className="pb-2 pt-4">
                                 <FormItem>
-                                    <FormLabel className="text-sc-90 bold-16">Your Name:</FormLabel>
+                                    <FormLabel className="text-slate-950 bold-16">Your Name:</FormLabel>
                                     <FormControl>
-                                        <Input type="text" placeholder="" {...field} />
+                                        <Input type="text" placeholder="" className="text-gray-950" {...field} />
                                     </FormControl>
                                 </FormItem>
                             </div>
@@ -223,7 +223,7 @@ const RatingForm = () => {
                         render={({ field }) => (
                             <div className="pb-2">
                                 <FormItem>
-                                    <FormLabel className="text-sc-90 bold-16">Phone:</FormLabel>
+                                    <FormLabel className="text-slate-950 bold-16">Phone:</FormLabel>
                                     <FormControl>
                                         <Input type="number" placeholder="" {...field} />
                                     </FormControl>
@@ -237,7 +237,7 @@ const RatingForm = () => {
                         render={({ field }) => (
                             <div className="pb-4">
                                 <FormItem>
-                                    <FormLabel className="text-sc-90 bold-16">Email:</FormLabel>
+                                    <FormLabel className="text-slate-950 bold-16">Email:</FormLabel>
                                     <FormControl>
                                         <Input type="email" placeholder="" {...field} />
                                     </FormControl>
@@ -250,7 +250,7 @@ const RatingForm = () => {
                     <ThankYouModal onConfirm={()=>thankYouConfirmation()}>
                         <Button 
                             type="submit"
-                            className="capitalize w-full bg-tearose-100/70  px-8 py-6 mx-8 bold-20 text-tearose-900 hover:bg-tearose-100/90"
+                            className="capitalize w-full bg-[#fbdbab]  px-8 py-6 mx-8 bold-20 text-slate-950 hover:bg-tearose-100/90"
                         >{language==="ES" ? "Enviar" : "Submit feedback"}</Button>
                     </ThankYouModal>
                 </div>
